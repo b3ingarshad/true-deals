@@ -327,7 +327,7 @@ const ProductManagement = () => {
                           >
                             <td className="px-5 py-4">
                               <img
-                                src={`${BASE_URL}/uploads/${product.image}`}
+                                src={product.image}
                                 alt={product.title}
                                 className="w-12 h-12 rounded-lg object-cover border border-gray-200"
                                 onError={(e) => {
@@ -494,7 +494,7 @@ const ProductManagement = () => {
                         className="flex items-center gap-5 px-6 py-5 hover:bg-gray-50/60 transition-colors"
                       >
                         <img
-                          src={`${BASE_URL}/uploads/${product.image}`}
+                          src={product.image}
                           alt={product.title}
                           className="w-16 h-16 rounded-xl object-cover border border-gray-200 flex-shrink-0"
                           onError={(e) => {

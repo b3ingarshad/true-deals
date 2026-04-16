@@ -1,46 +1,26 @@
 import multer from "multer";
-import path from "path";
-import fs from "fs";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import { v2 as cloudinary } from "cloudinary";
 
-// ✅ Vercel compatible temp folder
-const uploadPath = "/tmp/uploads";
-
-// Create folder if not exists
-if (!fs.existsSync(uploadPath)) {
-  fs.mkdirSync(uploadPath, { recursive: true });
-}
-
-// Storage config
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadPath); // ✅ use /tmp
-  },
-  filename: function (req, file, cb) {
-    const uniqueName =
-      Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, uniqueName + path.extname(file.originalname));
-  },
+// Cloudinary config
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// File filter (only images)
-const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|webp|avif/;
-  const extName = allowedTypes.test(
-    path.extname(file.originalname).toLowerCase()
-  );
-  const mimeType = allowedTypes.test(file.mimetype);
-
-  if (extName && mimeType) {
-    cb(null, true);
-  } else {
-    cb(new Error("Only image files are allowed"));
-  }
-};
+// Storage config
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "products", // cloudinary folder
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
+  },
+});
 
 const upload = multer({
   storage,
   limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
-  fileFilter,
 });
 
 export default upload;

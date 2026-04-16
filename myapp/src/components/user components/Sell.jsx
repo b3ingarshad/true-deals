@@ -485,7 +485,7 @@ const AuctionPage = () => {
                     >
                       <div className="relative h-64 overflow-hidden bg-gray-100">
                         <img
-                          src={`${BASE_URL}/uploads/${product.image}`}
+                          src={product.image}
                           alt={product.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
@@ -577,7 +577,7 @@ const AuctionPage = () => {
                     >
                       <div className="relative h-64 overflow-hidden bg-gray-100">
                         <img
-                          src={`${BASE_URL}/uploads/${product.image}`}
+                          src={product.image}
                           alt={product.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
@@ -649,7 +649,7 @@ const AuctionPage = () => {
             </button>
             <div className="relative h-48 bg-gray-100">
               <img
-                src={`${BASE_URL}/uploads/${selectedProduct.image}`}
+                src={selectedProduct.image}
                 alt={selectedProduct.title}
                 className="w-full h-full object-cover"
                 onError={(e) => {

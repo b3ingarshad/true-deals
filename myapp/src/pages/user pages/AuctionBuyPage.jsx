@@ -181,7 +181,7 @@ const AuctionBuyPage = () => {
                 <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col group" key={bid._id}>
                   <div className="relative h-56 bg-gray-100 overflow-hidden">
                     <img
-                      src={`${BASE_URL}/uploads/${product.image}`}
+                      src={product.image}
                       alt={product.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => { e.target.src = "https://via.placeholder.com/400x300?text=No+Image" }}
