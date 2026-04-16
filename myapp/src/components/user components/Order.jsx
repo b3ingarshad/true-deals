@@ -91,7 +91,7 @@ const Orders = () => {
               <div className="p-6 flex flex-col flex-grow">
                 <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gray-100">
                   <img
-                    src={`${BASE_URL}/${order.product?.image}`}
+                    src={`${BASE_URL}/uploads/${order.product?.image}`}
                     alt={order.product?.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/400x300?text=No+Image" }}
