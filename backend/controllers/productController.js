@@ -12,7 +12,7 @@ export const createProduct = async (req, res) => {
       auctionEndTime,
       fixedPrice,
     } = req.body;
-    const image = req.file ? req.file.filename : null;
+    const image = req.file ? (req.file.path || req.file.url) : null;
 
     if (!image)
       return res.status(400).json({ message: "Product image is required" });
@@ -103,7 +103,7 @@ export const updateProduct = async (req, res) => {
       product.fixedPrice = fixedPrice || product.fixedPrice;
     }
 
-    if (req.file) product.image = req.file.filename;
+    if (req.file) product.image = req.file.path || req.file.url;
 
     const updatedProduct = await product.save();
     res.json(updatedProduct);
