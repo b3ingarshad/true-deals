@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://true-deals.vercel.app";
 
 const CATEGORY_OPTIONS = [
   { value: "electronics", label: "Electronics" },

@@ -18,7 +18,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://true-deals.vercel.app/api/auth/forgot-password",
         {
           method: "POST",
           headers: {
@@ -48,7 +48,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/reset-password",
+        "https://true-deals.vercel.app/api/auth/reset-password",
         {
           method: "POST",
           headers: {

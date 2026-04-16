@@ -36,7 +36,7 @@ export const updateProfile = async (req, res) => {
 
     // If image uploaded
     if (req.file) {
-      user.profilePicUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+      user.profilePicUrl = `https://true-deals.vercel.app/uploads/${req.file.filename}`;
     }
 
     const updatedUser = await user.save();

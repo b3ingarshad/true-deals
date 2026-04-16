@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://true-deals.vercel.app";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);

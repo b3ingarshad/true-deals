@@ -13,7 +13,7 @@ const ResetPassword = () => {
     e.preventDefault();
 
     const response = await fetch(
-      `http://localhost:5000/api/auth/reset-password/${token}`,
+      `https://true-deals.vercel.app/api/auth/reset-password/${token}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

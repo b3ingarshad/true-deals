@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import Navbar from "../../components/user components/Navbar";
 import Footer from "../../components/user components/Footer";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://true-deals.vercel.app";
 
 const AuctionBuyPage = () => {
   const navigate = useNavigate();

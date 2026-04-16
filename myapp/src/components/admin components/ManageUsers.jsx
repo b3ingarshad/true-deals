@@ -16,7 +16,7 @@ const UserManagement = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:5000/api/users", {
+        const res = await fetch("https://true-deals.vercel.app/api/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -38,7 +38,7 @@ const UserManagement = () => {
   const handleAddUser = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/users", {
+      const res = await fetch("https://true-deals.vercel.app/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const UserManagement = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:5000/api/users/${userToDelete._id}`,
+        `https://true-deals.vercel.app/api/users/${userToDelete._id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -100,7 +100,7 @@ const UserManagement = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:5000/api/users/${currentUser._id}`,
+        `https://true-deals.vercel.app/api/users/${currentUser._id}`,
         {
           method: "PUT",
           headers: {

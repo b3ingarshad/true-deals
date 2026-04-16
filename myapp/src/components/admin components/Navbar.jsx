@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://true-deals.vercel.app";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
