@@ -2,20 +2,22 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 
-// Create uploads folder if it doesn't exist
-const uploadPath = "uploads";
+// ✅ Vercel compatible temp folder
+const uploadPath = "/tmp/uploads";
 
+// Create folder if not exists
 if (!fs.existsSync(uploadPath)) {
-  fs.mkdirSync(uploadPath);
+  fs.mkdirSync(uploadPath, { recursive: true });
 }
 
 // Storage config
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, uploadPath);
+    cb(null, uploadPath); // ✅ use /tmp
   },
   filename: function (req, file, cb) {
-    const uniqueName = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    const uniqueName =
+      Date.now() + "-" + Math.round(Math.random() * 1e9);
     cb(null, uniqueName + path.extname(file.originalname));
   },
 });
@@ -24,7 +26,7 @@ const storage = multer.diskStorage({
 const fileFilter = (req, file, cb) => {
   const allowedTypes = /jpeg|jpg|png|webp|avif/;
   const extName = allowedTypes.test(
-    path.extname(file.originalname).toLowerCase(),
+    path.extname(file.originalname).toLowerCase()
   );
   const mimeType = allowedTypes.test(file.mimetype);
 
