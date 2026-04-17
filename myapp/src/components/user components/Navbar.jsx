@@ -316,7 +316,7 @@ function Navbar() {
               D
             </div>
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
-              DealHub
+              TrueDeals
             </span>
           </Link>
 

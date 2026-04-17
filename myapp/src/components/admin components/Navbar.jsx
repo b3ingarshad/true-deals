@@ -167,7 +167,7 @@ const Navbar = () => {
           {/* Brand */}
           <Link to="/admin" className="flex-shrink-0">
             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
-              DealHub Admin
+              TrueDeals Admin
             </h1>
           </Link>
 

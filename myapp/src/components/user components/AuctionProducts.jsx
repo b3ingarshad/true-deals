@@ -172,7 +172,7 @@ const AuctionProducts = () => {
         key: data.razorpayKeyId,
         amount: data.amount,
         currency: "INR",
-        name: "DealHub",
+        name: "TrueDeals",
         description: buyProduct.title,
         order_id: data.razorpayOrderId,
         handler: async (response) => {
@@ -245,7 +245,7 @@ const AuctionProducts = () => {
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-brand-500 opacity-20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-brand-400 opacity-20 rounded-full blur-3xl"></div>
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 relative z-10">
-          DealHub Marketplace
+          TrueDeals Marketplace
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl relative z-10 leading-relaxed">
           Bid on exclusive auctions or buy instantly at fixed prices. Discover

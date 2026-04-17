@@ -77,7 +77,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold text-brand-600 uppercase tracking-wider mb-2">Simple Process</h2>
-            <h3 className="text-3xl md:text-5xl font-extrabold text-gray-900">How DealHub Works</h3>
+            <h3 className="text-3xl md:text-5xl font-extrabold text-gray-900">How TrueDeals Works</h3>
             <div className="mt-4 w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
           </div>
 

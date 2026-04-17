@@ -61,7 +61,7 @@ const AuctionBuyPage = () => {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID, // from dashboard
       amount: orderData.amount,
       currency: "INR",
-      name: "DealHub",
+      name: "TrueDeals",
       description: "Auction Winning Payment",
       order_id: orderData.razorpayOrderId,
 

@@ -165,7 +165,7 @@ const AuctionPage = () => {
           List a Product
         </h1>
         <p className="text-gray-500 mb-6">
-          Choose how you want to sell your item on DealHub.
+          Choose how you want to sell your item on TrueDeals.
         </p>
 
         <div className="inline-flex bg-gray-100 p-1.5 rounded-2xl gap-1">

@@ -63,7 +63,7 @@ const SignupPage = () => {
         <div className="max-w-md w-full space-y-8 bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-xl border border-white/50 z-10 relative">
           <div className="text-center mb-6">
             <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">Create Account</h2>
-            <p className="mt-2 text-sm text-gray-600">Join DealHub today</p>
+            <p className="mt-2 text-sm text-gray-600">Join TrueDeals today</p>
           </div>
              
           <form className="mt-8 space-y-6" onSubmit={handleSignup}>
